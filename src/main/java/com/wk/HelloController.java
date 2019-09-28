@@ -1,12 +1,15 @@
+/*
 package com.wk;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+*/
 /**
  * created by wk
- */
+ *//*
+
 @RestController
 public class HelloController {
 
@@ -16,3 +19,4 @@ public class HelloController {
         return "hello spring boot";
     }
 }
+*/

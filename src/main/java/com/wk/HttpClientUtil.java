@@ -1,3 +1,4 @@
+/*
 package com.wk;
 
 import org.apache.http.NameValuePair;
@@ -21,9 +22,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+*/
 /**
  * 工具
- */
+ *//*
+
 public class HttpClientUtil {
 
     private static final Logger log = LoggerFactory.getLogger(HttpClientUtil.class);
@@ -137,4 +140,4 @@ public class HttpClientUtil {
 
         return resultString;
     }
-}
+}*/
