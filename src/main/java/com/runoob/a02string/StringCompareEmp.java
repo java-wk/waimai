@@ -1,4 +1,4 @@
-package com.string;
+package com.runoob.a02string;
 
 public class StringCompareEmp{
 

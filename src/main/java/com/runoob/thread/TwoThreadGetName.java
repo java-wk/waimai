@@ -1,4 +1,4 @@
-package com.thread;
+package com.runoob.thread;
 
 public class TwoThreadGetName extends Thread {
    public void run() {

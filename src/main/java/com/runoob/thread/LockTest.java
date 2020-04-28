@@ -1,4 +1,4 @@
-package com.thread;
+package com.runoob.thread;
 
 import java.util.Date;
  

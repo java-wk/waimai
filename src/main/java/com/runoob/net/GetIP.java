@@ -1,4 +1,4 @@
-package com.net;
+package com.runoob.net;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;

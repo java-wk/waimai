@@ -1,4 +1,4 @@
-package com.thread;
+package com.runoob.thread;
 
 class MyThread extends Thread{
    boolean waiting= true;
