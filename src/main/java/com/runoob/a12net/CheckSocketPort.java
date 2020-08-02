@@ -1,4 +1,4 @@
-package com.runoob.net;
+package com.runoob.a12net;
 
 import java.net.*;
 import java.io.*;
@@ -20,7 +20,7 @@ public class CheckSocketPort {
             System.out.println("Exception occured"+ e);
             break;
          }
-         catch (IOException e) {
+         catch (IOException ignored) {
          }
       }
    }

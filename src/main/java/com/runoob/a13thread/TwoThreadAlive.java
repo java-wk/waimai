@@ -1,4 +1,4 @@
-package com.runoob.thread;
+package com.runoob.a13thread;
 
 public class TwoThreadAlive extends Thread {
    public void run() {

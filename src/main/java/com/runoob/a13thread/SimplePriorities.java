@@ -1,4 +1,4 @@
-package com.runoob.thread;
+package com.runoob.a13thread;
 
 public class SimplePriorities extends Thread {
    private int countDown = 5;

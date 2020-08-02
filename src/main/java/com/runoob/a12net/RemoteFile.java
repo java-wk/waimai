@@ -1,4 +1,4 @@
-package com.runoob.net;
+package com.runoob.a12net;
 
 import java.net.URL;
 import java.net.URLConnection;
