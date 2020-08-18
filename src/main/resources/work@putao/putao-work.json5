@@ -1,0 +1,22 @@
+[
+  {
+    "img_type":1,
+    "imgs":[
+      "url1.1",
+      "url1.2"
+    ]
+  },
+  {
+    "img_type":2,
+    "imgs":[
+      "url2.1",
+      "url2.2"
+    ]
+  },
+  {
+    "img_type":3,
+    "imgs":[
+      "url3.1"
+    ]
+  }
+]
