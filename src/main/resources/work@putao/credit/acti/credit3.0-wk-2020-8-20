@@ -1,0 +1,10 @@
+
+
+//首次完课送积分
+com.putaoabc.activitiescommonservice.service.credits.ActivityCreditsInfoService#processDownFirstFinishCourse
+
+//首次完课送积分
+com.putaoabc.activitiescommonservice.service.credits.ActivityCreditsInfoService#createRewardRecord
+
+//首次完课送积分
+com.putaoabc.activitiescommonservice.service.credits.ActivityCreditsInfoService#processDownFirstFinishCourse

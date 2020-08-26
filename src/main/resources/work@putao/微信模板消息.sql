@@ -146,17 +146,21 @@ VALUES
 
 
 
-INSERT INTO `miniprogram`.`acti_msg_wx_template_record` ( `title`, `description`, `del`, `course_type`, `activity_id`, `create_time`, `content`, `template_id`, `template_msg_type`, `wechat_official_name`, `coupon_id`, `remind_times`, `msg_type` )
-VALUES
-	( NULL, '老带新拼团-5退款', 0, NULL, NULL, '2020-02-17 18:16:26', '{
-  "first": " Hi，{用户英文昵称}您的拼团：{团长支付金额}元/{团长课时数}节葡萄英语1对1美教课已结束，由于拼团失败，您的学费将在3个工作日内原路退回。",
-  "keyword1": "未达到成团人数，拼团失败",
+UPDATE `miniprogram`.`acti_msg_wx_template_record`
+SET `title` = NULL, `description` = '老带新拼团-5退款', `del` = 0, `course_type` = NULL, `activity_id` = NULL, `create_time` = '2020-02-17 18:16:26',
+`content` = '{
+  "first": "Hi，{用户英文昵称}您的拼团：{团长活动套餐名称}的钱款已原路退回至您的账户，请注意查收~",
+  "keyword1": "{团长活动套餐名称}",
   "keyword2": "{团长支付金额}",
-  "remark": "您的拼团还差{成团人数-当前团内人数}名团员就能成团了，加油哦！点击详情查看拼团进度↓",
+  "keyword3": "{团长支付金额}",
+  "remark": "点击详情查看拼团情况↓↓",
   "keyword1_color": "#7B64FF",
   "keyword2_color": "#7B64FF",
+  "keyword3_color": "#7B64FF",
   "remark_color": "#66CC00"
-}', 'EUDy1_18s4Dp9Pdc_54hJwbiq5gntMfatK321QnVgpQ', '退款通知', '葡萄英语服务号', NULL, NULL, NULL );
+}',
+`template_id` = 'ylopNAC4WdeASKlmbmTNzEGlzuR0aaZWodzDIhIXaaY', `template_msg_type` = '退款通知', `wechat_official_name` = '葡萄英语服务号', `coupon_id` = NULL, `remind_times` = NULL, `msg_type` = NULL
+WHERE `id` = 105;
 
 
 

@@ -1,5 +1,7 @@
 package com.runoob.a13thread;
 
+import com.alibaba.fastjson.JSON;
+
 class MyThread extends Thread{
    boolean waiting= true;
    boolean ready= false;
@@ -51,6 +53,9 @@ public class Main {
       while(thrd.isAlive()) 
       System.out.println("alive");
       showThreadStatus(thrd);
+
+      System.out.println(JSON.toJSONString(Thread.currentThread(),true));
+
    }
    static void showThreadStatus(Thread thrd) {
       System.out.println(thrd.getName() + "Alive:=" + thrd.isAlive() + " State:=" + thrd.getState());

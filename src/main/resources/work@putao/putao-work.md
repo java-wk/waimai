@@ -28,12 +28,54 @@ rsync /search/user/wk/activities-common-service.jar server01.bj3::root/odin/daem
 
 
 grep 'at com.putaoabc.activitiescommonservice' /search/dfs_log/course-service/Server0[1-4].bj3/course-service.2020-08-16.log
+grep '215620' /search/dfs_log/activities-common-service/Server0[1-4].bj3/activities-common-service.2020-08-24.log
+grep 'putaoId=413532' /search/dfs_log/activities-common-service/Server0[1-4].bj3/activities-common-service.2020-08-24.log
+grep 'putaoId=328041' /search/dfs_log/activities-common-service/Server0[1-4].bj3/activities-common-service.2020-08-24.log
 grep xception /search/odin/daemon/activities-common-service/log/activities-common-service.2020-08-18.log >> xception-2020-8-18.log
 grep '.java:' /search/odin/daemon/activities-common-service/log/activities-common-service.2020-08-18.log >> at.java:2020-8-18.log
+grep 'putaoid=413532' /search/odin/daemon/activities-common-service/log/activities-common-service.2020-08-26.log >> at.java:2020-8-18.log
 
     defaultErrorHandler-系统异常
     xception:
     'com.putaoabc.activitiescommonservice'
+    putaoid=49350
+
+
+String logStr = LogUtil.getLogStr(Thread.currentThread().getStackTrace()[1].getMethodName());
+logger.info(logStr + " Params: putaoId={} ", putaoId);
+logger.info(logStr + " Params: classId={} ", classId);
+logger.info(logStr + " Params: putaoId={} refundType={}", putaoId, refundType);
+logger.info(logStr + " Params: putaoId={} refundFee={} orderId={} refundType={}", putaoId, refundFee, orderId, refundType);
+logger.info(logStr + " Return: GroupBuyOtnVO={}", JSON.toJSONString(vo, true));
+logger.error(logStr + " Return: void=failed! ", e);
+
+```
+
+日志写法
+```
+
+    /**
+     * 老带新团购 退款
+     */
+    public boolean applyRefund(Integer putaoId, Integer refundFee, Integer orderId, String refundType) {
+        String logStr = LogUtil.getLogStr(Thread.currentThread().getStackTrace()[1].getMethodName());
+        logger.info(logStr + " Params: putaoId={} refundFee={} orderId={} refundType={}", putaoId, refundFee, orderId, refundType);
+
+        try {
+            ApplyRefundParamDTO applyRefundParamDTO = new ApplyRefundParamDTO();
+            applyRefundParamDTO.setOrderId(orderId);
+            applyRefundParamDTO.setPutaoId(putaoId);
+            applyRefundParamDTO.setRefundFee(refundFee);
+            applyRefundParamDTO.setRefundType(refundType);
+
+            orderFeignClient.applyRefund(applyRefundParamDTO);
+            logger.info(logStr + " Return: void=success");
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 
 ```
 
