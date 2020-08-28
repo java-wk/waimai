@@ -1,0 +1,1 @@
+ren C:\Users\putao-1\IdeaProjects\putaoabc_api_v2\activities-common-service\target\activities-common-service-0.0.1-SNAPSHOT.jar activities-common-service.jar
