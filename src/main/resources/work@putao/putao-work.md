@@ -29,11 +29,11 @@ rsync /search/user/wk/activities-common-service.jar server01.bj3::root/odin/daem
 
 grep 'at com.putaoabc.activitiescommonservice' /search/dfs_log/course-service/Server0[1-4].bj3/course-service.2020-08-16.log
 grep '215620' /search/dfs_log/activities-common-service/Server0[1-4].bj3/activities-common-service.2020-08-24.log
-grep 'putaoId=413532' /search/dfs_log/activities-common-service/Server0[1-4].bj3/activities-common-service.2020-08-24.log
-grep 'putaoId=328041' /search/dfs_log/activities-common-service/Server0[1-4].bj3/activities-common-service.2020-08-24.log
+grep '262373' /search/dfs_log/activities-common-service/Server0[1-4].bj3/activities-common-service.2020-08-24.log
+grep 'Params: cfm=' /search/dfs_log/activities-common-service/Server0[1-4].bj3/activities-common-service.2020-09-05.log
 grep xception /search/odin/daemon/activities-common-service/log/activities-common-service.2020-08-18.log >> xception-2020-8-18.log
 grep '.java:' /search/odin/daemon/activities-common-service/log/activities-common-service.2020-08-18.log >> at.java:2020-8-18.log
-grep 'putaoid=741189' /search/odin/daemon/activities-common-service/log/activities-common-service.2020-09-01.log >> at.java:2020-8-18.log
+grep 'putaoid=262373' /search/odin/daemon/activities-common-service/log/activities-common-service.2020-09-01.log >> at.java:2020-8-18.log
 grep 'Params: inviteRewardRecordDTO' /search/odin/daemon/activities-common-service/log/activities-common-service.2020-09-01.log >> at.java:2020-8-18.log
 grep 'conversion提卡-' /search/odin/daemon/activities-common-service/log/activities-common-service.2020-09-01.log >> at.java:2020-8-18.log
 
@@ -59,6 +59,7 @@ logger.error(logStr + " Return: void=failed! ", e);
 logger.error(logStr + " Exception: 创建定时任务失败! ", e);
 
 ```
+
 
 日志写法
 ```
@@ -127,7 +128,6 @@ maven inner.putaoabc.net.cn:8086
 ```
 
 
-
 一些小记
 ```
 swagger.enabled=false
@@ -177,29 +177,13 @@ https://webres.putaoabc.com/jht/image/combuy6/bg_09.png
 海报：https://webres.putaoabc.com/jht/image/obgroup/poster.png
 
 
+```
 
-[root@webServer02 ~]# grep 'conversion提卡-' /search/odin/daemon/activities-common-service/log/activities-common-service.2020-09-01.log
-2020-09-01 10:43:36.062  INFO 31919 --- [nio-8789-exec-3] c.p.a.s.c.ActivityCreditsShoppingService : url=/course_v2/activityCenter/credits/conversioning logId=15989282153666056 act=conversion提卡-redemptionResult:{"cardnum":"1","cards":[{"expiretime":"2022-08-21","cardpws":"3779-AB8A-741B-CF45","cardno":"JDV58320005980000182"}],"orderid":"S2009011335949","err_msg":"","cardname":"京东E卡10元卡密","cardid":"1227401","sporder_id":"41","ordercash":"9.98","retcode":"1"}
-2020-09-01 10:48:56.703  INFO 31919 --- [nio-8789-exec-5] c.p.a.s.c.ActivityCreditsShoppingService : url=/course_v2/activityCenter/credits/conversioning logId=1598928536134182 act=conversion提卡-redemptionResult:{"cardnum":"1","cards":[{"expiretime":"2021-07-19","cardpws":"wA23tpxd2p2d92R9b2","cardno":"e49fc031168cf7e352c581d55071f3a3"}],"orderid":"S2009011361763","err_msg":"","cardname":"腾讯视频VIP（月卡）20元卡密","cardid":"1241804","sporder_id":"42","ordercash":"16","retcode":"1"}
-2020-09-01 10:49:10.361  INFO 31919 --- [nio-8789-exec-3] c.p.a.s.c.ActivityCreditsShoppingService : url=/course_v2/activityCenter/credits/conversioning logId=15989285496135674 act=conversion提卡-redemptionResult:{"cardnum":"1","cards":[{"expiretime":"2021-07-19","cardpws":"wA23thxs2n2297Rfcf","cardno":"80a6b1fa706caaaa651d2c7e1efda589"}],"orderid":"S2009011363085","err_msg":"","cardname":"腾讯视频VIP（月卡）20元卡密","cardid":"1241804","sporder_id":"43","ordercash":"16","retcode":"1"}
-2020-09-01 10:52:38.360  INFO 31919 --- [nio-8789-exec-6] c.p.a.s.c.ActivityCreditsShoppingService : url=/course_v2/activityCenter/credits/conversioning logId=15989287578466337 act=conversion提卡-redemptionResult:{"cardnum":"1","cards":[{"expiretime":"2022-08-21","cardpws":"F0C6-EC81-3E14-848F","cardno":"JDV58320005980000190"}],"orderid":"S2009011380919","err_msg":"","cardname":"京东E卡10元卡密","cardid":"1227401","sporder_id":"44","ordercash":"9.98","retcode":"1"}
-2020-09-01 11:06:25.504  INFO 31919 --- [nio-8789-exec-7] c.p.a.s.c.ActivityCreditsShoppingService : url=/course_v2/activityCenter/credits/conversioning logId=15989295848669638 act=conversion提卡-redemptionResult:{"cardnum":"1","cards":[{"expiretime":"2021-07-19","cardpws":"wA23tWxM2h2996R2h8","cardno":"f2503de023723b7fe41ef92024722ed3"}],"orderid":"S2009011430587","err_msg":"","cardname":"腾讯视频VIP（月卡）20元卡密","cardid":"1241804","sporder_id":"45","ordercash":"16","retcode":"1"}
-2020-09-01 11:07:10.348  INFO 31919 --- [nio-8789-exec-9] c.p.a.s.c.ActivityCreditsShoppingService : url=/course_v2/activityCenter/credits/conversioning logId=1598929629793305 act=conversion提卡-redemptionResult:{"cardnum":"1","cards":[{"expiretime":"2021-07-19","cardpws":"wA23tQxR2j2691R3i3","cardno":"7f2324c70ff238dd97f832fb10328d95"}],"orderid":"S2009011433106","err_msg":"","cardname":"腾讯视频VIP（月卡）20元卡密","cardid":"1241804","sporder_id":"46","ordercash":"16","retcode":"1"}
-2020-09-01 16:48:26.995  INFO 8757 --- [nio-8789-exec-8] c.p.a.s.c.ActivityCreditsShoppingService : url=/course_v2/activityCenter/credits/conversioning logId=15989501069686050 act=conversion提卡-redemptionResult:
-2020-09-01 16:48:47.710  INFO 8757 --- [nio-8789-exec-3] c.p.a.s.c.ActivityCreditsShoppingService : url=/course_v2/activityCenter/credits/conversioning logId=1598950127691787 act=conversion提卡-redemptionResult:
-[root@webServer02 ~]# grep 'conversion提卡-' /search/odin/daemon/activities-common-service/log/activities-common-service.2020-08-31.log
-2020-08-31 18:07:46.089  INFO 31919 --- [nio-8789-exec-8] c.p.a.s.c.ActivityCreditsShoppingService : url=/course_v2/activityCenter/credits/conversioning logId=15988684654468708 act=conversion提卡-redemptionResult:{"cardnum":"1","cards":[{"expiretime":"2022-08-21","cardpws":"DBBF-F0AB-61F9-5C82","cardno":"JDV58320005980000052"}],"orderid":"S2008319344314","err_msg":"","cardname":"京东E卡10元卡密","cardid":"1227401","sporder_id":"34","ordercash":"9.98","retcode":"1"}
-2020-08-31 18:07:58.601  INFO 31919 --- [nio-8789-exec-3] c.p.a.s.c.ActivityCreditsShoppingService : url=/course_v2/activityCenter/credits/conversioning logId=15988684781251928 act=conversion提卡-redemptionResult:{"cardnum":"1","cards":[{"expiretime":"2022-08-21","cardpws":"3622-39D6-4266-DACC","cardno":"JDV58320005980000053"}],"orderid":"S2008319344709","err_msg":"","cardname":"京东E卡10元卡密","cardid":"1227401","sporder_id":"35","ordercash":"9.98","retcode":"1"}
-2020-08-31 18:23:08.063  INFO 31919 --- [nio-8789-exec-5] c.p.a.s.c.ActivityCreditsShoppingService : url=/course_v2/activityCenter/credits/conversioning logId=15988693874519134 act=conversion提卡-redemptionResult:{"cardnum":"1","cards":[{"expiretime":"2022-08-21","cardpws":"6125-5D2D-9256-E8C8","cardno":"JDV58320005980000055"}],"orderid":"S2008319378040","err_msg":"","cardname":"京东E卡10元卡密","cardid":"1227401","sporder_id":"36","ordercash":"9.98","retcode":"1"}
-2020-08-31 18:23:32.274  INFO 31919 --- [nio-8789-exec-2] c.p.a.s.c.ActivityCreditsShoppingService : url=/course_v2/activityCenter/credits/conversioning logId=15988694117937903 act=conversion提卡-redemptionResult:{"cardnum":"1","cards":[{"expiretime":"2021-07-19","cardpws":"wA23t4xy2Y239bP8Aa","cardno":"820aa6bf42154af1994d1bd0ab2ed528"}],"orderid":"S2008319379019","err_msg":"","cardname":"腾讯视频VIP（月卡）20元卡密","cardid":"1241804","sporder_id":"37","ordercash":"16","retcode":"1"}
-2020-08-31 18:23:42.494  INFO 31919 --- [nio-8789-exec-1] c.p.a.s.c.ActivityCreditsShoppingService : url=/course_v2/activityCenter/credits/conversioning logId=15988694220191067 act=conversion提卡-redemptionResult:{"cardnum":"1","cards":[{"expiretime":"2021-07-19","cardpws":"wA23tNxj2t219cP7B0","cardno":"cfc1004009a9197e248610be19096a72"}],"orderid":"S2008319379442","err_msg":"","cardname":"腾讯视频VIP（月卡）20元卡密","cardid":"1241804","sporder_id":"38","ordercash":"16","retcode":"1"}
-2020-08-31 19:56:33.700  INFO 31919 --- [nio-8789-exec-8] c.p.a.s.c.ActivityCreditsShoppingService : url=/course_v2/activityCenter/credits/conversioning logId=15988749928815840 act=conversion提卡-redemptionResult:{"cardnum":"1","cards":[{"expiretime":"2022-08-21","cardpws":"79A5-5B00-00E7-9C92","cardno":"JDV58320005980000061"}],"orderid":"S2008319686026","err_msg":"","cardname":"京东E卡10元卡密","cardid":"1227401","sporder_id":"39","ordercash":"9.98","retcode":"1"}
-2020-08-31 19:57:36.702  INFO 31919 --- [nio-8789-exec-1] c.p.a.s.c.ActivityCreditsShoppingService : url=/course_v2/activityCenter/credits/conversioning logId=15988750562135898 act=conversion提卡-redemptionResult:{"cardnum":"1","cards":[{"expiretime":"2021-07-19","cardpws":"wA23tixK282a96P0Y1","cardno":"1538a37bbdb5c7c92b1f1b9644b99bab"}],"orderid":"S2008319688189","err_msg":"","cardname":"腾讯视频VIP（月卡）20元卡密","cardid":"1241804","sporder_id":"40","ordercash":"16","retcode":"1"}
+已兑换的
 
 ```
 
-
-
+{"cardnum":"1","cards":[{"expiretime":"2022-08-21","cardpws":"3A0A-AEE2-C6F2-3C01","cardno":"JDV58320005980000653"}],"orderid":"S2009025452347","err_msg":"","cardname":"京东E卡10元卡密","cardid":"1227401","sporder_id":"49","ordercash":"9.98","retcode":"1"}
 {"cardnum":"1","cards":[{"expiretime":"2022-08-21","cardpws":"3779-AB8A-741B-CF45","cardno":"JDV58320005980000182"}],"orderid":"S2009011335949","err_msg":"","cardname":"京东E卡10元卡密","cardid":"1227401","sporder_id":"41","ordercash":"9.98","retcode":"1"}
 {"cardnum":"1","cards":[{"expiretime":"2022-08-21","cardpws":"F0C6-EC81-3E14-848F","cardno":"JDV58320005980000190"}],"orderid":"S2009011380919","err_msg":"","cardname":"京东E卡10元卡密","cardid":"1227401","sporder_id":"44","ordercash":"9.98","retcode":"1"}
 {"cardnum":"1","cards":[{"expiretime":"2022-08-21","cardpws":"DBBF-F0AB-61F9-5C82","cardno":"JDV58320005980000052"}],"orderid":"S2008319344314","err_msg":"","cardname":"京东E卡10元卡密","cardid":"1227401","sporder_id":"34","ordercash":"9.98","retcode":"1"}
@@ -215,3 +199,31 @@ https://webres.putaoabc.com/jht/image/combuy6/bg_09.png
 {"cardnum":"1","cards":[{"expiretime":"2021-07-19","cardpws":"wA23t4xy2Y239bP8Aa","cardno":"820aa6bf42154af1994d1bd0ab2ed528"}],"orderid":"S2008319379019","err_msg":"","cardname":"腾讯视频VIP（月卡）20元卡密","cardid":"1241804","sporder_id":"37","ordercash":"16","retcode":"1"}
 {"cardnum":"1","cards":[{"expiretime":"2021-07-19","cardpws":"wA23tNxj2t219cP7B0","cardno":"cfc1004009a9197e248610be19096a72"}],"orderid":"S2008319379442","err_msg":"","cardname":"腾讯视频VIP（月卡）20元卡密","cardid":"1241804","sporder_id":"38","ordercash":"16","retcode":"1"}
 {"cardnum":"1","cards":[{"expiretime":"2021-07-19","cardpws":"wA23tixK282a96P0Y1","cardno":"1538a37bbdb5c7c92b1f1b9644b99bab"}],"orderid":"S2008319688189","err_msg":"","cardname":"腾讯视频VIP（月卡）20元卡密","cardid":"1241804","sporder_id":"40","ordercash":"16","retcode":"1"}
+
+{"cardnum":"1","cards":[{"expiretime":"2021-08-17","cardpws":"2BB6-B9B4-AE56-0CH6","cardno":"2008190600021265"}],"orderid":"S2009025453612","err_msg":"","cardname":"爱奇艺黄金会员（月卡）19.8元卡密","cardid":"1240411","sporder_id":"50","ordercash":"15.84","retcode":"1"}
+
+
+```
+
+
+
+
+            https://docs.qq.com/doc/DUlJuY1l5aUJuVXVF      投放9.9元拼团小程序
+            https://docs.qq.com/doc/DUkF6cEd4SmNiU2tr      投放9.9元体验营H5
+            https://docs.qq.com/doc/DUkVaWG9BbWdpTFln      9.9拼团小程序支付链路优化
+            https://docs.qq.com/doc/DUnFJV25JVnh0dkNO      通用活动页
+            https://docs.qq.com/doc/DUm5Fb0pKRW1ZYm1G      团购活动
+            https://docs.qq.com/doc/DUnNIRlFjckJHenVn      掌通B端免费领体验营页面
+            https://docs.qq.com/doc/DUlBUSnFJeHR4VFhU      秒杀活动
+            https://docs.qq.com/doc/DUklQcFN3TEdVQWRu      活动短信新增召回短信
+            https://docs.qq.com/doc/DUmxLV2VDVWxHQXhs      抽奖活动用户条件
+            https://docs.qq.com/doc/DUmVKbGpyYnpQSlJT      长期班支持定期开营
+            https://docs.qq.com/doc/DUnp5Ymd3SkJ0Q1pC      0元学36课时活动-二期
+            https://docs.qq.com/doc/DUmNWTGViWkhrVVpj      0元学36课时活动-1.5期
+            https://docs.qq.com/doc/DUmZ2YVFkTHJXWHNP      0元学36课时活动-2.0期
+            https://docs.qq.com/doc/DUlRLQ2pTblNpQUp0      体验营裂变投放页
+            https://docs.qq.com/doc/DUlZobXFIbnluTEJ5      代理拼团页面-一期
+            https://docs.qq.com/doc/DUmdiYkJ2QkFkbldT      兑换码、手工开课、完课返现优化
+            https://docs.qq.com/doc/DUmNGd2JsR0JsSVBl      老带新拼团
+            https://docs.qq.com/doc/DUkZUYkhFcWx6aU1p      老带新兼容裂变拼团
+            
