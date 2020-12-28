@@ -1,1 +1,28 @@
-string to be copied
+springboot 启动
+https://www.cnblogs.com/trgl/p/7353782.html
+
+
+org.springframework.boot.SpringApplication
+
+ DEFAULT_CONTEXT_CLASS = "org.springframework.context.annotation.AnnotationConfigApplicationContext"
+ DEFAULT_SERVLET_WEB_CONTEXT_CLASS = "org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext"
+ DEFAULT_REACTIVE_WEB_CONTEXT_CLASS = "org.springframework.boot.web.reactive.context.AnnotationConfigReactiveWebServerApplicationContext"
+ BANNER_LOCATION_PROPERTY_VALUE = "banner.txt"
+ BANNER_LOCATION_PROPERTY = "spring.banner.location"
+ SYSTEM_PROPERTY_JAVA_AWT_HEADLESS = "java.awt.headless"
+ logger = {LogAdapter$Slf4jLocationAwareLog@1574}
+
+primarySource = {Class@1348} "class com.zsxj.fdk.goods.FdkGoodsApplication"
+ cachedConstructor = null
+ newInstanceCallerCache = null
+ name = "com.zsxj.fdk.goods.FdkGoodsApplication"
+ classLoader = {Launcher$AppClassLoader@1560}
+ reflectionData = {SoftReference@1567}
+ classRedefinedCount = 0
+ genericInfo = null
+ enumConstants = null
+ enumConstantDirectory = null
+ annotationData = null
+ annotationType = null
+ classValueMap = null
+args = {String[0]@1562}
